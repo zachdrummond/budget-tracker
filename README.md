@@ -12,8 +12,8 @@
 This progressive web app tracks all of your financial needs in one simple place and allows you to access everything, even if you are offline. You can even download this app on your mobile device. After you add any expenses and/or deposits, a beautiful chart will display everything, including a running total of your account balance. Are you traveling without WIFI or data? You can still add transactions to the app. Once you are online again, simply refresh your browser and all of the transactions that you added when you were offline will be added to the account.
 
 ## Links
-* Website: https://budget-tracker-zachdrummond.herokuapp.com/
-* GitHub Repository: https://github.com/zachdrummond/budget-tracker
+* Website: https://pwa-budget-tracker-zd.herokuapp.com/
+* GitHub Repository: https://github.com/zachdrummond/pwa-budget-tracker
 
 ## Usage
 1. Add a name for the transaction and the amount.

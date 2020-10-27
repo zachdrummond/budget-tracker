@@ -14,7 +14,7 @@ const FILES_TO_CACHE = [
 const CACHE_NAME = "static-cache-v1";
 const DATA_CACHE_NAME = "data-cache-v1";
 
-// install
+// Install Event Listener
 self.addEventListener("install", function (evt) {
   evt.waitUntil(
     caches
@@ -24,12 +24,10 @@ self.addEventListener("install", function (evt) {
         cache
           .addAll(FILES_TO_CACHE)
           .then((result) => {
-            // debugger;
-            console.log("result of add all", result);
+            console.log("Result of add all", result);
           })
           .catch((err) => {
-            // debugger;
-            console.log("Add all error: ", err);
+            console.log("Add all Error: ", err);
           });
       })
       .catch((err) => {
@@ -40,7 +38,7 @@ self.addEventListener("install", function (evt) {
   self.skipWaiting();
 });
 
-// activate
+// Activate Event Listener
 self.addEventListener("activate", function (evt) {
   evt.waitUntil(
     caches.keys().then((keyList) => {
@@ -58,7 +56,7 @@ self.addEventListener("activate", function (evt) {
   self.clients.claim();
 });
 
-// fetch
+// Fetch Event Listener
 self.addEventListener("fetch", function (evt) {
   if (evt.request.url.includes("/api/")) {
     evt.respondWith(
@@ -67,7 +65,7 @@ self.addEventListener("fetch", function (evt) {
         .then((cache) => {
           return fetch(evt.request)
             .then((response) => {
-              // If the response was good, clone it and store it in the cache.
+              // If the response was good, clone it and store it in the cache
               if (response.status === 200) {
                 cache.put(evt.request.url, response.clone());
               }
@@ -75,7 +73,7 @@ self.addEventListener("fetch", function (evt) {
               return response;
             })
             .catch((err) => {
-              // Network request failed, try to get it from the cache.
+              // Network request failed, try to get it from the cache
               return cache.match(evt.request);
             });
         })

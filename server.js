@@ -23,9 +23,9 @@ app.use(express.static("public"));
 // ROUTES
 app.use(require("./routes/api.js"));
 
-// DATABASE CONNECTIOn
+// DATABASE CONNECTION
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost:27017/fitness-trackerDB",
+  process.env.MONGODB_URI || "mongodb://localhost:27017/budget",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

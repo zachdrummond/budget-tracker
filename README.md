@@ -8,37 +8,41 @@
 * [Credits](#Credits)
 
 ## Description
-This app tracks all of your financial needs in one place and allows you to access everything even if you are offline. 
+This progressive web app tracks all of your financial needs in one place and allows you to access everything even if you are offline. 
 
 ## Links
 * Website: 
 * GitHub Repository: https://github.com/zachdrummond/budget-tracker
 
 ## Design Elements
-### *JavaScript - Node.js*
-* Node Package Manager - Express, Express-Handlebars, MySQL
+* Progressive Web App - Manifest, Service-Worker, Cache API
+* JavaScript
+* Node.js
+* Express.js
+* Mongoose.js
+* MongoDB
+* Node Package Manager - Compression, Morgan, Lite-Server
 * Model View Controller Architecture
-* Object Relational Mapper
-* Routing
-* Middleware Functions
-* View Engine Template
-* Server-Side Rendering
-* JSON
-* Modules
-* Promises
-* DOM Manipulation
-* AJAX
-* Event Listeners
-* Objects
-* Methods
-* Functions
-* PORTs & Environment Variables
-* If...else statements
-* Comments
+* HTML
+* CSS
 
 ## App Preview
-![1](./public/assets/img/.png)
-![2](./public/assets/img/.png)
+### *Home Page*
+![1](./public/images/Home.png)
+### *Online Transactions*
+![2](./public/images/transactions.png)
+### *Offline Transaction*
+![3](./public/images/offline.png)
+### *Offline Transaction now Online*
+![4](./public/images/online.png)
 
 ## Credits
-* 
+* https://nodejs.org/en/
+* http://expressjs.com/
+* https://www.mongodb.com/
+* https://mongoosejs.com/
+* https://www.npmjs.com/
+* https://www.npmjs.com/package/compression
+* https://www.npmjs.com/package/morgan
+* https://www.npmjs.com/package/lite-server
+* https://www.heroku.com/

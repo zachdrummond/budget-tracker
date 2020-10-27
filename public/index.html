@@ -11,21 +11,27 @@
       type="image/x-icon"
     />
 
+    <!-- Link to Font Awesome -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- Link to CSS -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- Link to Web Manifest -->
     <link rel="manifest" href="manifest.webmanifest" />
 
     <title>Budget Tracker</title>
   </head>
+
   <body>
     <div class="wrapper">
+      <!-- Site Header -->
       <div class="total">
         <div class="total">Your total is: $<span id="total">0</span></div>
       </div>
 
+      <!-- Transaction Form -->
       <div class="form">
         <input type="text" id="t-name" placeholder="Name of transaction" />
         <input
@@ -41,6 +47,7 @@
         <p class="error"></p>
       </div>
 
+      <!-- Transaction Chart  -->
       <div class="transactions">
         <table>
           <thead>
@@ -54,9 +61,13 @@
       <canvas id="myChart"></canvas>
     </div>
 
+    <!-- Link to Chart JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- Link to JS -->
     <script src="index.js"></script>
+    <!-- Link to DB -->
     <script src="db.js"></script>
+    <!-- Service Worker -->
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
